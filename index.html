@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>doodleoughts by luke</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+  
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/timers.js"></script>
+
+
+    <!-- HIDE PAGES AND START TIMER -->
+    <script type="text/javascript">
+
+    function readMe(){
+
+    console.log("readMe called"); 
+    $('#startPage').hide();
+    $('#successPage').hide(); 
+    $('canvas').hide();
+    $( "#aboutCopy" ).show(); 
+
+    } // readMe
+
+    
+    window.onload = function() {
+    
+    $('canvas').hide();
+    console.log("canvas hidden");
+    $('#successPage').hide(); 
+    $('#aboutCopy').hide(); 
+
+    } // onload 
+    </script>
+
+    <!-- Load the Paper.js library -->
+    <script type="text/javascript" src="js/paper-full.min.js"></script>
+    <!-- Load external PaperScript and associate it with myCanvas -->
+    <script type="text/paperscript" src="js/draw.js" canvas="myCanvas"></script>
+
+
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">doodleoughts</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="home"class="active"><a href="http://joanaflor.com/dev/4/index.html">Home</a></li>
+            <li><a id="about" href="#" onclick="readMe();return false;">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+    
+    <canvas id="myCanvas" resize></canvas>
+
+    <div class="starter-template">
+    
+    
+
+
+    <div id="startPage">
+    
+    <h1>You have only 15 secs to draw</h1>
+    <button class="btn btn-default" onclick="autoTimer();return false;">Ready, Steady, Go</button>
+  
+
+    </div><!-- this is a start page -->
+
+
+    <div id="successPage">
+    
+    <h1>Success, your drawing was posted to Tumblr!</h1>
+    <br>
+    <p><a href="http://loritchie500.tumblr.com" target="_blank">To see your drawing click here</a></p>
+    
+    <br>
+    <form action="http://joanaflor.com/dev/4/index.html">
+    <input class="btn btn-default" type="submit" value="Play Again">
+    </form>
+
+    </div><!-- this is a SUCCESS page -->
+
+
+    <div id="aboutCopy">
+      
+    <p>This is all about the project</p>
+
+
+    </div>
+
+
+
+    
+    </div><!-- Starter -->
+
+
+        
+    
+
+
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+  
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
