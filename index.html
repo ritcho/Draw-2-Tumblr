@@ -27,6 +27,8 @@
     <!-- HIDE PAGES AND START TIMER -->
     <script type="text/javascript">
 
+    <!-- Consider moving to JS file -->
+
     function readMe(){
 
     console.log("readMe called"); 
@@ -41,7 +43,6 @@
     window.onload = function() {
     
     $('canvas').hide();
-    console.log("canvas hidden");
     $('#successPage').hide(); 
     $('#aboutCopy').hide(); 
 
@@ -72,8 +73,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
+
+          <!-- Need to fix hard code of URL -->
             <li id="home"class="active"><a href="http://joanaflor.com/dev/4/index.html">Home</a></li>
-            <li><a id="about" href="#" onclick="readMe();return false;">About</a></li>
+            
+            <li><a id="about" href="#" onclick="readMe();return false;">About
+
+            </a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -87,7 +93,7 @@
     <div class="starter-template">
     
     
-
+    <!-- this is a start page -->
 
     <div id="startPage">
     
@@ -95,9 +101,10 @@
     <button class="btn btn-default" onclick="autoTimer();return false;">Ready, Steady, Go</button>
   
 
-    </div><!-- this is a start page -->
+    </div><!-- end of this is a start page -->
 
 
+    <!-- this is a Success page -->
     <div id="successPage">
     
     <h1>Success, your drawing was posted to Tumblr!</h1>
@@ -109,16 +116,17 @@
     <input class="btn btn-default" type="submit" value="Play Again">
     </form>
 
-    </div><!-- this is a SUCCESS page -->
+    </div><!-- end of this is a SUCCESS page -->
 
 
+    <!-- this is a about page -->
     <div id="aboutCopy">
       
     <p>This is all about the project</p>
 
 
     </div>
-
+    <!-- end of this is a About page -->
 
 
     

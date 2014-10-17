@@ -1,4 +1,12 @@
-// Main JS
+/**
+ * Main JS looks after timer, start draw, save to tumblr and reset
+ *
+ * 
+ */
+
+
+// Binds the click and touches to same events
+
 (function ($) {
     $.fn.tclick = function (onclick) {
         this.bind("touchstart", function (e) { onclick.call(this, e); e.stopPropagation(); e.preventDefault(); });
@@ -9,17 +17,17 @@
 
 })(jQuery);
 
+// I believe we can delete (perhaps pause i am getting??)
+
 function autoTimer(){
 
-    TimersJS.oneShot(3000, function() {
-    console.log("game starts");
     goDraw();
-    }) // TimerJS
+    
     } // autoTimer
 
 
 
-// Timers
+// Timer to give you 15seconds to draw - then restart is called
 function playTimer(){
 
   TimersJS.oneShot(15000, function() {
@@ -30,20 +38,21 @@ function playTimer(){
 }
 
 // LAUNCH DRAWING EXPERIENCE 
+// Hide start and success pages, only show Canvas. 
 
 function goDraw(){
 
   $('#startPage').hide();
   $('#successPage').hide(); 
   $('canvas').show();
-  playTimer(); 
+  playTimer(); // Start the Clock! 
 
 }
 
 
 
 
-// SAVE CONTENT TO TUMBLR
+// SAVE Drawing TO TUMBLR!
 
 function callSave(){
 
@@ -73,11 +82,11 @@ function callSave(){
 } // callSave
 
 
-// AUTO SAVE FUNCTION
+// AUTO SAVE FUNCTION + Show success screen
 
 function restart(){
 
-	callSave();
+	callSave(); // Calll the Save function 
 	console.log('saved to tumblr');
 
 	//clear();

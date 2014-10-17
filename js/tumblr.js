@@ -1,3 +1,13 @@
+/**
+ * Tubblr JS
+ *
+ * Copied from somewhere
+ *
+ * Copyright (c) 2013 Brett Fattori (bfattori@gmail.com)
+ *
+ *
+ */
+
 var fs = require('fs');
 var qs = require('querystring');
 
